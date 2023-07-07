@@ -28,7 +28,7 @@ https://www.mongodb.com/docs/ops-manager/current/installation/
 실습과정에서는 사전에 설치된 Ops Manager를 사용합니다.
 Ops Manager에 개인 계정으로 로그인하고 프로젝트로 이동하여 줍니다. 
 
-<img src="/04.operation/images/image01.png" width="80%" height="80%">     
+<img src="/04.operation/images/image01.png" width="70%" height="70%">     
 
 
 데이터 베이스 배포 버튼을 클릭하면 Agent 설치 정보를 볼 수 있습니다. Redhat Linux와 호환 (Amazon linux2)으로 이를 선택 합니다.   
@@ -37,7 +37,7 @@ Ops Manager에 개인 계정으로 로그인하고 프로젝트로 이동하여 
 
 Agent가 설치될 머신의 OS 정보에 맞추어 다운로드 할 수 있습니다. 
 
-<img src="/04.operation/images/image03.png" width="50%" height="50%">     
+<img src="/04.operation/images/image03.png" width="30%" height="30%">     
 
 
 이후 설치를 위한 정보가 표시 되며 이를 순서대로 실행 하여 줍니다.  
@@ -52,6 +52,7 @@ Agent가 설치될 머신의 OS 정보에 맞추어 다운로드 할 수 있습�
                                  Dload  Upload   Total   Spent    Left  Speed
 100 18.5M    0 18.5M    0     0   110M      0 --:--:-- --:--:-- --:--:--  109M
 # sudo rpm -U mongodb-mms-automation-agent-manager-12.0.23.7711-1.x86_64.rhel7.rpm
+
 ````
 
 설치 후 Agent 의 Config 파일을 수정 하여 줍니다. GroupId와 API Key, Opsmanager의 Url을 등록 하여 줍니다.   
@@ -111,11 +112,11 @@ Agent 가 설치가 완료 되었음으로 실제 Cluster를 배포 합니다.
 ### Deploy
 Agent 가 설치가 되어 있음으로 Build New 를 클릭 하고 Replica Set를 선택 하여 줍니다.
 
-<img src="/04.operation/images/image05.png" width="50%" height="50%">     
+<img src="/04.operation/images/image05.png" width="70%" height="70%">     
 
 배포 대상을 지정 하는 것으로 제한된 리소스로 인해 한대의 머신에 Replica Set를 설치 하도록 합니다. 
 
-<img src="/04.operation/images/image06.png" width="70%" height="70%">     
+<img src="/04.operation/images/image06.png" width="80%" height="80%">     
 
 한대의 머신임으로 host 정보는 지정된 머신을 선택 하고 3개의 인스턴스가 구동될 포트 정보를 겹치지 않게 27001,27002,27003으로 부여 하고 데이터 베이스 폴더 또한 구분이 되도록 입력 하여 줍니다.
 
@@ -123,15 +124,11 @@ Create Replica Set 버튼을 클릭 하면 데이터 베이스가 배포 됩니�
 
 실제 배포를 위해서 Review and Deploy 버튼을 클릭 하면 실제 배포가 진행 됩니다.   
 
-<img src="/04.operation/images/image07.png" width="70%" height="70%">     
+<img src="/04.operation/images/image07.png" width="90%" height="90%">     
 
 배포는 수분의 시간이 소요 되며 다음과 같이 설치 상태가 초록색으로 보여 지게 됩니다.    
 
-<img src="/04.operation/images/image08.png" width="70%" height="70%">     
-
-
-
-클러스터 정보를 변경 하여 줍니다. (적용은 몇분이 소요 됩니다.) 
+<img src="/04.operation/images/image08.png" width="90%" height="90%">     
 
 
 #### Monitor
@@ -140,7 +137,7 @@ Create Replica Set 버튼을 클릭 하면 데이터 베이스가 배포 됩니�
 
 Monitoring을 enable 하기 위해 activate를 선택 합니다.
 
-<img src="/04.operation/images/image09.png" width="50%" height="50%">     
+<img src="/04.operation/images/image09.png" width="70%" height="70%">     
 
 변경 사항 적용을 위해 Review & deploy 버튼을 클릭 하여 줍니다.   
 
@@ -152,15 +149,15 @@ Monitoring을 enable 하기 위해 activate를 선택 합니다.
 데이터베이스 계정 로그인 방법을 선택 하기 위해 Cluster 메뉴 중 Security를 클릭 하고 Settings를 선택 합니다.    
 계정과 비밀번호를 이용한 로그인 방법을 선택 하고 저장 합니다.  
 
-<img src="/04.operation/images/image13.png" width="50%" height="50%">     
+<img src="/04.operation/images/image13.png" width="80%" height="80%">     
 
 
 Cluster 메뉴에 Security를 클릭 합니다.    
 
-<img src="/04.operation/images/image11.png" width="50%" height="50%">     
+<img src="/04.operation/images/image11.png" width="80%" height="80%">     
 
 Add New user를 클릭 합니다.   
-사용자 계정과 권한 (편의상 모든 데이터베이스에 읽기 쓰기가 가능한 권한을 부여 하여 줍니다.)을 선택 하고 비밀번호를 입력 하여 줍니다. 방식은 SCRAM-256
+사용자 계정과 권한 (편의상 모든 데이터베이스에 읽기 쓰기가 가능한 권한을 부여 하여 줍니다.)을 선택 하고 비밀번호를 입력 하여 줍니다. 방식은 SCRAM-SHA-256을 선택합니다.
 
-<img src="/04.operation/images/image12.png" width="50%" height="50%">     
+<img src="/04.operation/images/image12.png" width="60%" height="60%">     
 

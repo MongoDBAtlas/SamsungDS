@@ -161,3 +161,8 @@ Add New user를 클릭 합니다.
 
 <img src="/04.operation/images/image12.png" width="60%" height="60%">     
 
+해당 계정으로 접근 하기 위해 Compass를 실행 합니다.    
+접근용 주소를 작성하여 주고 데이터베이스 사용자와 비밀번호를 입력 하여 주고 저장 후 연결 버튼을 클릭 합니다.   
+
+<img src="/04.operation/images/image14.png" width="60%" height="60%">     
+

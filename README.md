@@ -14,9 +14,6 @@ __Agenda__
  
 - __Handson__ [GitHub][1]
     - CRUD
-     
-
-- Break
     
 
 3. __Document Modeling__
@@ -32,9 +29,6 @@ __Agenda__
      
 - __Handson__  [GitHub][3]
     - Index & Explain
-
-
-- Break
         
 
 5. __Operation__

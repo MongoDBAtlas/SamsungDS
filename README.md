@@ -41,4 +41,6 @@ __Agenda__
 
 [3]: https://github.com/MongoDBAtlas/SamsungDS/tree/main/03.index%20and%20aggregation
 
-[5]: https://github.com/MongoDBAtlas/AtlasSCloud/tree/main/04.operation
+[5]: https://github.com/MongoDBAtlas/SamsungDS/tree/main/04.operation
+
+[6]: https://github.com/MongoDBAtlas/SamsungDS/tree/main/05.timeseries
